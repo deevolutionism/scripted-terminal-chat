@@ -7,3 +7,20 @@ body {
 	background-color: black;
 	color: white;
 }
+
+ul {
+	display: inline-block;
+	list-style: none;
+}
+
+pre {
+	display: inline-block;
+}
+
+#cursor {
+	width: 12px;
+	height: 1em;
+	background-color: white;
+	display: inline-block;
+	visibility: hidden;
+}

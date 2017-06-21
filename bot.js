@@ -20,8 +20,39 @@ console.log('test');
 
 var data = [
 	"HELLO?",
+	"\n",
 	"IS ANYONE READING THIS?",
-	"IF YOU'RE THERER, TYPE YES . . . ."
+	"\n",
+	"IF YOU'RE THERE, TYPE YES . . . .",
+	"+"
 ]
 
+// terminal prints out text character-by-character
+// detect when to accept user input
 
+
+var printText = () => {
+	var time = 0
+	var parent = document.getElementById('terminal')
+	for (let i = 0; i < data.length; i++) {
+		console.log('---------')
+		let strarr = data[i].split('')
+		for (let j = 0; j < strarr.length; j++){
+			console.log(j)
+			time += 100
+			setTimeout( () => {
+				parent.childNodes[0].data += strarr[j]
+			}, time)
+		}
+	}
+}
+
+var cursorBlink = () => {
+	var cursor = document.getElementById('cursor')
+	var intervalID = window.setInterval( () => {
+		cursor.style.visibility = cursor.style.visibility === 'visible' ? 'hidden' : 'visible'
+	},500)
+}
+
+printText();
+cursorBlink()

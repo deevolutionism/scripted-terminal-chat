@@ -10,13 +10,29 @@ body {
 	color: white;
 }
 
+#terminal-window {
+	margin: 10%;
+	border: 1px solid white;
+	border-radius: 2px;
+}
+
 ul {
 	display: inline-block;
 	list-style: none;
 }
 
+li {
+	/*display: inline-block;*/
+}
+
 pre {
 	display: inline-block;
+}
+
+#input {
+	display: inline-block;
+	/*visibility: hidden;*/
+	opacity: 0;
 }
 
 #cursor {
